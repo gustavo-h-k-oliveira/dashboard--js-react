@@ -1,0 +1,9 @@
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+nav > a {
+    color: white;
+    text-decoration: none;
+}
