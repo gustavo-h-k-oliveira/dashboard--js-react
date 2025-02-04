@@ -1,9 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}	
+
 nav {
     display: flex;
     flex-direction: column;
+    gap: 1em;
 }
 
 nav > a {
     color: white;
     text-decoration: none;
+    margin: 1em 1.5em;
+}
+
+nav > a:hover {
+    color: white;
+    text-decoration: underline;
 }
