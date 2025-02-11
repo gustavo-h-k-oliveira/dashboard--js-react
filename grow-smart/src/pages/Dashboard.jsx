@@ -1,11 +1,13 @@
-import Header from "../components/Header"
-import Navbar from "../components/Navbar"
+import React from 'react';
+import Header from "../components/Header";
+import Navbar from "../components/Navbar";
+import './Dashboard.css';
 
 function App() {
   return (
-    <div style={{ display: 'flex' }}>
+    <div id="root">
       <Navbar />
-      <div style={{ marginLeft: '200px', width: '100%' }}>
+      <div className="main-content">
         <Header />
         <div className='grid-dashboard'>
           <div className='vertical-container'></div>
@@ -16,7 +18,7 @@ function App() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
