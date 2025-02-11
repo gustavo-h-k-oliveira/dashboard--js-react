@@ -1,0 +1,19 @@
+header {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    padding: 1rem 2rem;
+    background-color: #444;
+    position: fixed; /* Fixa o header no topo */
+    top: 0;
+    gap: 1.5rem;
+    left: 233px; /* Ajusta a margem esquerda para não sobrepor o navbar */
+    width: calc(100% - 233px); /* Ajusta a largura para não ocupar o espaço do navbar */
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+}
+
+h1 {
+    color: var(--header-text);
+    font-size: 2.5rem;
+    margin: 0;
+}
