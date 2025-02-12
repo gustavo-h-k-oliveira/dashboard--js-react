@@ -1,0 +1,60 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 650px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 7px;
+}
+
+.container > h1 {
+    text-wrap: wrap;
+    text-align: center;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 > strong {
+    color: darkorange;
+}
+
+.container > p {
+    font-size: 18px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    gap: 1.5em;
+}
+
+.form > input {
+    height: 24px;
+    width: 90%;
+    font-size: 16px;
+}
+
+.form > button {
+    background-color: #444;
+}
