@@ -2,7 +2,7 @@ import './Navbar.css';
 
 export default function Navbar() {
     return (
-        <div className="container">
+        <div className="navbar">
             <div className="logo">
                 <p>SMART<br/><strong>GROW</strong></p>
             </div>

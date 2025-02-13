@@ -12,9 +12,32 @@ body, html {
 }
 
 .main-content {
-    margin-left: 233px; /* Espaço para o navbar */
-    width: calc(100% - 233px); /* Ocupa o espaço restante */
+    margin-left: 232px; /* Espaço para o navbar */
+    width: calc(100% - 232px); /* Ocupa o espaço restante */
     height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-top: 20px; /* Adicione um padding-top para garantir espaço abaixo do Header */
+}
+
+.vertical-container {
+    margin-top: 88px;
+    display: flex;
+    height: 100px;
+    background-color: #444;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 88px 20px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    overflow-y: auto;
+    height: 100%;
+    box-sizing: border-box;
 }

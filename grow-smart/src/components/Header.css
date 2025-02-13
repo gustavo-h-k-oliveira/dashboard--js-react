@@ -1,7 +1,6 @@
 header {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
     padding: 1rem 2rem;
     background-color: #444;
     position: fixed; /* Fixa o header no topo */
@@ -16,4 +15,9 @@ h1 {
     color: var(--header-text);
     font-size: 2.5rem;
     margin: 0;
+}
+
+p {
+    color: lightgray;
+    font-size: 1rem;
 }
