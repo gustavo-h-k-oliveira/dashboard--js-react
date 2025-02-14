@@ -4,16 +4,17 @@ nav {
     align-items: center;
     gap: 1em;
     height: 100vh;
-    width: 15vw;
-    min-width: 260px; 
+    width: 12%; /* Ocupa 12% da largura da página */
     position: fixed;
     left: 0;
     top: 0;
     background-color: #333;
     padding: 1em;
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
 }
 
 .logo > p {
+    margin-bottom: 50px;
     color: white;
     font-size: 1.5em;
     font-weight: 600;
@@ -22,13 +23,14 @@ nav {
 }
 
 p > span {
-    color: var(--primary-color);
+    color: var(--primary-color--dark);
     font-weight: 800;
 }
 
 nav > a {
     color: white;
     font-size: 1.2em;
+    text-align: center;
     text-decoration: none;
     margin: 1em 1.5em;
 }
@@ -46,12 +48,18 @@ nav > a.active {
 }
 
 /* Media query para telas menores */
-@media (max-width: 768px) {
+@media (max-width: 1420px) {
     nav {
         width: 100%;
-        height: auto;
+        height: 100px;
         flex-direction: row;
         justify-content: space-around;
+    }
+
+    .logo > p {
+        font-size: 1.2em;
+        padding-right: 50px;
+        margin: 0;
     }
 
     nav > a {
