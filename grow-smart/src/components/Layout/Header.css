@@ -11,7 +11,7 @@ header {
 }
 
 h1 {
-    color: var(--header-text);
+    color: var(--text-dark);
     font-size: 2.5rem;
     margin: 0;
 }
