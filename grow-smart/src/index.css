@@ -12,9 +12,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --primary-color: #f1c40f;
-  --secondary-color: #3674B5;
+  --primary-color--dark: #f3d767;
+  --secondary-color--dark: #9bc4f0;
+  --text-dark: #d1d1d1;
   --font-family: 'Roboto';
+
 }
 
 a {
