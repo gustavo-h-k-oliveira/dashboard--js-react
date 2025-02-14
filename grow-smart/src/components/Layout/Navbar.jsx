@@ -7,16 +7,17 @@ export default function Navbar() {
             <div className="logo">
                 <p>SMART<br/><span>GROW</span></p>
             </div>
-            <NavLink to='/' end className={({ isActive }) => isActive ? "active" : ""}>
+            
+            <NavLink to='/' end activeClassName="active">
                 Dashboard
             </NavLink>
-            <NavLink to='/historic' className={({ isActive }) => isActive ? "active" : ""}>
+            <NavLink to='/historic' activeClassName="active">
                 Histórico de Dados
             </NavLink>
-            <NavLink to='/control' className={({ isActive }) => isActive ? "active" : ""}>
+            <NavLink to='/control' activeClassName="active">
                 Painel de Controle
             </NavLink>
-            <NavLink to='/report' className={({ isActive }) => isActive ? "active" : ""}>
+            <NavLink to='/report' activeClassName="active">
                 Relatório
             </NavLink>
         </nav>
