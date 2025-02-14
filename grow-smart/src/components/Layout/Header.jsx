@@ -7,7 +7,7 @@ export default function Header() {
                 Dashboard
             </h1>
             <p>
-                dia da semana, data
+                Quarta-feira, 14 de fevereiro de 2025
             </p>
         </header>
     )
