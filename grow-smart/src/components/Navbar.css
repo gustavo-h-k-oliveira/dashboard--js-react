@@ -1,0 +1,61 @@
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    height: 100vh;
+    width: 12vw;
+    min-width: 250px; 
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #333;
+    padding: 1em;
+}
+
+.logo > p {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p > span {
+    color: var(--primary-color);
+    font-weight: 800;
+}
+
+nav > a {
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    margin: 1em 1.5em;
+}
+
+nav > a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Classe para o link ativo */
+nav > a.active {
+    color: gray;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+    nav {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav > a {
+        margin: 0.5em;
+        font-size: 1em;
+    }
+}
