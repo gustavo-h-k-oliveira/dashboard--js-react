@@ -1,10 +1,10 @@
 import React from 'react';
-import Header from "../components/Header";
-import Navbar from "../components/Navbar";
-import Block from "../components/Block";
+import Header from "../components/Layout/Header";
+import Navbar from "../components/Layout/Navbar";
+import Block from "../components/UI/Block";
 import './Dashboard.css';
 
-function App() {
+export default function Dashboard() {
   return (
     <div id="root">
       <Navbar />
@@ -49,5 +49,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
