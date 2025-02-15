@@ -1,16 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from "../components/Layout/Header";
 import Navbar from "../components/Layout/Navbar";
 import Block from "../components/UI/Block";
+import Button from '@mui/material/Button';
 import './Dashboard.css';
 
 export default function Dashboard() {
+  const [isOnline, setIsOnline] = useState(true);
+
+  useEffect(() => {
+    const checkServerStatus = () => {
+      // Simulação de verificação de status do servidor
+      fetch('/api/server-status')
+        .then(response => response.json())
+        .then(data => setIsOnline(data.isOnline))
+        .catch(() => setIsOnline(false));
+    };
+
+    const intervalId = setInterval(checkServerStatus, 5000); // Verifica a cada 5 segundos
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <div id="root">
       <Navbar />
       <div className="main-content">
         <Header />
-        <div className='vertical-container'></div>
+        <div className='vertical-container'>
+          <div className={`status-indicator ${isOnline ? 'online' : 'offline'}`}>
+            {isOnline ? 'On-line' : 'Off-line'}
+          </div>
+        </div>
         <div className='grid-dashboard'>
           <Block 
             name='Bancada A'

@@ -43,6 +43,22 @@ body, html {
     box-sizing: border-box;
 }
 
+.status-indicator {
+  width: 15px;
+  height: 15px;
+  border: 4px solid white;
+  border-radius: 50%;
+  text-align: right;
+}
+
+.status-indicator.online {
+  background-color: green;
+}
+
+.status-indicator.offline {
+  background-color: red;
+}
+
 @media (max-width: 1420px) {
     #root {
         display: flex;
