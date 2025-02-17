@@ -38,9 +38,58 @@ body, html {
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     grid-gap: 20px;
     padding: 20px;
-    overflow-y: auto;
     height: 100%;
     box-sizing: border-box;
+}
+
+.status-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 20px;
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border: 4px solid white;
+  border-radius: 50%;
+  text-align: right;
+}
+
+.status-indicator.online {
+  background-color: green;
+}
+
+.status-indicator.offline {
+  background-color: red;
+}
+
+.status-indicator-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.video-button {
+    background-color: #555;
+    color: white;
+    margin: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    align-items: center;
+    transition: background-color 0.3s ease; /* Adiciona transição de cor */
+}
+
+.video-button:hover {
+    background-color: #333;
+}
+
+@media (max-width: 1075px) {
+    .main-content {
+        margin: 200px 20px 0px 20px;  /* Ajustar a margem para evitar sobreposição */
+    }
 }
 
 @media (max-width: 1420px) {
@@ -50,7 +99,7 @@ body, html {
     }
     
     .main-content {
-        margin: 200px 20px 0px 20px;  /* Ajustar a margem para evitar sobreposição */
+        margin: 100px 20px 0px 20px;  /* Ajustar a margem para evitar sobreposição */
         width: 100%;
     }
 
@@ -69,7 +118,7 @@ body, html {
         grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
         grid-gap: 20px;
         padding: 20px;
-        overflow-y: auto;
+        overflow: hidden; /* Impede a criação de barras de rolagem */
         height: 100%;
         box-sizing: border-box;
     }
