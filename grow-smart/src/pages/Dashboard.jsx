@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Header from "../components/Layout/Header";
 import Navbar from "../components/Layout/Navbar";
 import Block from "../components/UI/Block";
-import Button from '@mui/material/Button';
+import Modal from "../components/UI/Modal"; // Importa o componente Modal
 import './Dashboard.css';
+import videocamIcon from '../assets/videocam.svg';
 
 export default function Dashboard() {
   const [isOnline, setIsOnline] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false); // Estado para controlar o modal
 
   useEffect(() => {
     const checkServerStatus = () => {
@@ -22,15 +24,29 @@ export default function Dashboard() {
     return () => clearInterval(intervalId);
   }, []);
 
+  const handleVideoButtonClick = () => {
+    setIsModalOpen(true); // Abre o modal ao clicar no botão
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false); // Fecha o modal
+  };
+
   return (
     <div id="root">
       <Navbar />
       <div className="main-content">
         <Header />
         <div className='vertical-container'>
-          <div className={`status-indicator ${isOnline ? 'online' : 'offline'}`}>
-            {isOnline ? 'On-line' : 'Off-line'}
+          <div className='status-container'>
+            <div className={`status-indicator ${isOnline ? 'online' : 'offline'}`}></div>
+            <p className='status-indicator-label'>
+              {isOnline ? 'On-line' : 'Off-line'}
+            </p>
           </div>
+          <button className='video-button' onClick={handleVideoButtonClick}>
+            <img src={videocamIcon} alt='ícone de câmera' />
+          </button>
         </div>
         <div className='grid-dashboard'>
           <Block 
@@ -67,6 +83,10 @@ export default function Dashboard() {
           />
         </div>
       </div>
+      <Modal show={isModalOpen} onClose={handleCloseModal}>
+        <h2>Modal Content</h2>
+        <p>Este é o conteúdo do modal.</p>
+      </Modal>
     </div>
   );
 }
